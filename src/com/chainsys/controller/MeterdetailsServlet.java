@@ -32,6 +32,7 @@ public class MeterdetailsServlet extends HttpServlet {
 		User user = new User();
 		user.setCus_id(consumer_id);
 		User user1 = new User();
+		
 		try {
 			user1 = userdao.Meterdetails(user);
 			request.setAttribute("list4", user1);

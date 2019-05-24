@@ -27,6 +27,7 @@ public class ExternalServlet extends HttpServlet {
 		String paymentAmount=request.getParameter("paymentAmount");
 		request.setAttribute("returnUrl", url);
 		request.setAttribute("paymentAmount", paymentAmount);
+	    
 		RequestDispatcher requestDispatcher=request.getRequestDispatcher("PaymentGateway.jsp");
 		requestDispatcher.forward(request, response);
 	}

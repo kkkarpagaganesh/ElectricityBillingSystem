@@ -43,15 +43,14 @@ button {
 <h1 align="center" style="padding: 20px 60px; font-style: italic;font-size: 100px; font-family: fantasy;">Payment successful </h1>
 
 <body>
+<form action="PaymentSuccessServlet" method="post">
 <!--form action="LogoutServlet" method="post"-->
 <table align="center" style="width: 25%" border="5" bgcolor="white">
 
 		<tbody>
+		
 
-			<tr>
-				<th align="center" bgcolor="grey"
-					style="font-size: 25px; color: white">Payment Details</th>
-			</tr>
+			
 			<tr>
 				<th align="left">Account Holder Name:<%out.print( request.getParameter("acc_holder_name")); %></th>
 			</tr>
@@ -67,6 +66,9 @@ button {
 		</tbody>
 
 	</table>
+	<br>
+	<td><button type="submit"
+				style="height: 50px; width: 100px; margin-left: 620px">Payment Success Details</button></td>
 <!--div>
 	<div>Account Holder Name: </div><%out.print( request.getParameter("acc_holder_name")); %>
 	</div>
@@ -78,6 +80,6 @@ button {
 	<div>Transaction Status: </div><%out.print( request.getParameter("trn_status")); %>
 	</div-->
 
-
+</form>
 </body>
 </html>

@@ -81,7 +81,7 @@
     <servlet-name>UserCheckingServlet</servlet-name>
     <url-pattern>/UserCheckingServlet</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>UserCheckingServlet1</servlet-name>
     <servlet-class>com.chainsys.controller.UserCheckingServlet1</servlet-class>
   </servlet>
@@ -89,12 +89,4 @@
     <servlet-name>UserCheckingServlet1</servlet-name>
     <url-pattern>/UserCheckingServlet1</url-pattern>
   </servlet-mapping>
-  <!-- <servlet>
-    <servlet-name>PaymentServlet</servlet-name>
-    <servlet-class>com.chainsys.external.bank.PaymentServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>PaymentServlet</servlet-name>
-    <url-pattern>/PaymentServlet</url-pattern>
-  </servlet-mapping> -->
 </web-app>
