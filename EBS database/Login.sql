@@ -1,0 +1,43 @@
+--------------------------------------------------------
+--  File created - Friday-May-24-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table LOGIN
+--------------------------------------------------------
+
+  CREATE TABLE "HR"."LOGIN" 
+   (	"LOGIN_ID" NUMBER(10,0), 
+	"USER_NAME" VARCHAR2(60 BYTE), 
+	"PASSWORD" VARCHAR2(20 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into HR.LOGIN
+SET DEFINE OFF;
+Insert into HR.LOGIN (LOGIN_ID,USER_NAME,PASSWORD) values (1,'mahe@gmail.com','1234');
+Insert into HR.LOGIN (LOGIN_ID,USER_NAME,PASSWORD) values (2,'2','aravind');
+--------------------------------------------------------
+--  DDL for Index SYS_C004577
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "HR"."SYS_C004577" ON "HR"."LOGIN" ("USER_NAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table LOGIN
+--------------------------------------------------------
+
+  ALTER TABLE "HR"."LOGIN" MODIFY ("LOGIN_ID" NOT NULL ENABLE);
+ 
+  ALTER TABLE "HR"."LOGIN" MODIFY ("USER_NAME" NOT NULL ENABLE);
+ 
+  ALTER TABLE "HR"."LOGIN" MODIFY ("PASSWORD" NOT NULL ENABLE);
+ 
+  ALTER TABLE "HR"."LOGIN" ADD UNIQUE ("USER_NAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT)
+  TABLESPACE "USERS"  ENABLE;

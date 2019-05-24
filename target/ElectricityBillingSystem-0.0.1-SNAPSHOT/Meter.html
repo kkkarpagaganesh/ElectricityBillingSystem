@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Circle Details</title>
+
+<style>
+body {
+	background-image: url('New-areva-10258.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+input[type=Number], input[type=text], select[name=met_month] {
+	width: 100%;
+	padding: 9px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color:#FFB6C1 ;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+</style>
+
+</head>
+
+<body>
+	<form method="post" action="MeterServlet">
+		<h1 align="center">Electricity billing system</h1>
+		<table align="center" style="padding: 3px 40px">
+			<tbody>
+				<tr>
+					<td><button type="button"
+							onclick="window.location.href='CircleDetails.jsp"'
+							style="height: 50px; width: 100px;">Circle details</button></td>
+
+					<td><button type="button"
+							onclick="window.location.href='Consumer.html'"
+							style="height: 50px; width: 100px;">Consumer details</button></td>
+
+					<td><button type="button"
+							onclick="window.location.href='Meter.html'"
+							style="height: 50px; width: 100px;">Meter details</button></td>
+
+					
+					<td><button type="submit" style="height: 50px; width: 100px;">Logout</button></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h1 align="center" style="color: black">Meter Details</h1>
+		<table align="center" style="padding: 3px 40px">
+
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Meter no</font></td>
+			</tr>
+			<tr>
+				<td><input type="Number" name="met_no" placeholder=" meter no"
+					required /></td>
+			</tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Meter reading</font></td>
+			</tr>
+			<tr>
+
+				<td><input type="text" name="met_unit" placeholder="meter unit"
+					required /></td>
+			</tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Month</font></td>
+				</tr>
+				<tr>			
+				<td><select  name="met_month" style="width: 155px" required>
+						<option>-----select-----</option>
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Amount</font></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="met_amount"
+					placeholder="Amount" required /></td>
+			</tr>
+
+			<tr>
+				<td><button type="submit" style="height: 50px; width: 100px;">Next</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

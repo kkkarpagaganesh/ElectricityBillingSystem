@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Circle Details</title>
+
+<style>
+body {
+	background-image: url('New-areva-10258.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#btn-pos {
+	position: absolute;
+    top: 90vh;
+    left: 45vw;
+}
+
+input[type=Number], input[type=text], input[type=email], input[type=radio]
+	{
+	width: 100%;
+	padding: 9px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #FFB6C1;
+	color: black;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+</style>
+
+</head>
+
+<body>
+	<form method="post" action="CustomerServlet">
+		<h1 align="center">Electricity billing system</h1>
+		<table align="center" style="padding: 3px 40px">
+			<tbody>
+				<tr>
+					<td><button type="button"
+							onclick="window.location.href='CircleDetails.jsp'"
+							style="height: 50px; width: 100px;">Circle details</button></td>
+
+					<td><button type="button"
+							onclick="window.location.href='Consumer.html'"
+							style="height: 50px; width: 100px;">Consumer details</button></td>
+					<td><button type="button"
+							onclick="window.location.href='Meter.html'"
+							style="height: 50px; width: 100px;">Meter details</button></td>
+
+
+					
+
+					<td><button type="submit" style="height: 50px; width: 100px;">Logout</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<h1 align="center" style="color: black">Consumer Details</h1>
+		<table align="left" style="padding: 3px 150px">
+
+			<!--tr>
+				<td><font size="4" color="black" style="background-color:#FFB6C1 ">Customer ID</font></td>
+			
+
+				<td><input type="number" name="cus_id" placeholder="Customer ID" required /></td> 
+
+			</tr-->
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Name</font></td>
+			
+				<td><input type="text" name="cus_name" placeholder="name" required /></td>
+			</tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1 ">Age</font></td>
+			
+
+				<td><input type="number" name="cus_age" placeholder="age" required /></td>
+			</tr>
+
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Gender</font></td>
+			
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Male</font><input type="radio" name="cus_gender" value="male" required />
+					<font size="4" color="black" style="background-color: #FFB6C1">Female</font><input type="radio" name="cus_gender" value="female" required />
+					<font size="4" color="black" style="background-color: #FFB6C1">Others</font><input type="radio" name="cus_gender" value="others" required />
+				</td>
+			</tr>
+			
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Email</font></td>
+			
+				<td><input type="email" name="cus_email" placeholder=" email"
+					required /></td>
+			</tr>
+			
+			</table>
+			<table align="right" style="padding: 3px 150px">
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Address</font></td>
+			
+				<td><input type="text" name="cus_address" placeholder="address"
+					required /></td>
+			</tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color: #FFB6C1">Pincode</font></td>
+			
+				<td><input type="number" name="cus_pincode" placeholder="pincode"
+					required /></td>
+			</tr>
+			<tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color:#FFB6C1">Phone number</font></td>
+			
+				<td><input type="number" name="cus_phonenumber"
+					placeholder="Phone number" required /></td>
+			</tr>
+			<tr>
+			<tr>
+				<td><font size="4" color="black" style="background-color:#FFB6C1">Aadhar number</font></td>
+		
+				<td><input type="number" name="cus_aadharnumber"
+					placeholder="aadhar number" required /></td>
+			</tr>
+		
+			<tr>
+				<td><button id="btn-pos"  type="submit" style="height: 50px; width: 100px;">Next</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
